@@ -1,0 +1,16 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: conic-gradient(from -45deg, #749d34, #f4ff1d, #cceb9d, #749d34);
+
+  .title {
+    color: honeydew;
+  }
+
+  .star {
+    color: greenyellow;
+  }
+}
