@@ -1,10 +1,11 @@
 .App {
   height: 100vh;
   width: 100vw;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: conic-gradient(from -45deg, #749d34, #f4ff1d, #cceb9d, #749d34);
+  text-align: center;
+  animation: spin 2s ease-in-out infinite;
 
   .title {
     color: honeydew;
@@ -12,5 +13,22 @@
 
   .star {
     color: greenyellow;
+  }
+
+  $transitionCount: 20;
+  @function ratio($i) {
+    $ratio: 100 * $i / $transitionCount;
+    @return #{$ratio}#{"%"};
+  }
+  @function degree($i) {
+    $degree: -45 + 360 * $i/ $transitionCount;
+    @return #{$degree}deg;
+  }
+  @keyframes spin {
+    @for $i from 0 through $transitionCount {
+      #{ratio($i)} {
+        background: conic-gradient(from degree($i) at top left, #749d34, #a2a838, #cceb9d, #749d34);
+      }
+    }
   }
 }
