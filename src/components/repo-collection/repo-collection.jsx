@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import RepoItem from "../repo-item/repo-item";
 import { useFetchRepos } from "./effects";
 import "./repo-collection.scss";
 
@@ -25,11 +26,8 @@ const RepoCollection = () => {
 
   return (
     <div className="repo-collection" ref={scrollTargetRef}>
-      {repos.map(({ id, name, description }) => (
-        <div key={id} className="repo">
-          <h2 className="name">{name}</h2>
-          <p className="description">{description}</p>
-        </div>
+      {repos.map(({ id, ...otherRepoProps }) => (
+        <RepoItem key={id} {...otherRepoProps} />
       ))}
     </div>
   );

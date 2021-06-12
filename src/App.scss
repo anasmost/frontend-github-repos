@@ -21,12 +21,12 @@
 
   @keyframes blink {
     from {
-      color: greenyellow;
-      font-size: 1em;
+      color: #7ddaa7;
+      font-size: 0.9em;
     }
     to {
       color: #a2a838;
-      font-size: 0.9em;
+      font-size: 0.8em;
     }
   }
 
@@ -42,7 +42,13 @@
   @keyframes spin {
     @for $i from 0 through $transitionCount {
       #{ratio($i)} {
-        background: conic-gradient(from degree($i) at top left, #749d34, #a2a838, #cceb9d, #749d34);
+        background: conic-gradient(
+          from degree($i) at top left,
+          #749d34,
+          #a2a838,
+          #cceb9d,
+          #749d34
+        );
       }
     }
   }

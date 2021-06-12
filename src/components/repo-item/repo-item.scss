@@ -1,0 +1,47 @@
+.repo {
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 800px;
+  color: azure;
+  padding: 20px;
+  border-radius: 10px;
+  text-align-last: left;
+  display: grid;
+  grid-template:
+    "avatar name"
+    "avatar description"
+    "avatar summary"
+    / 1fr 5fr;
+
+  column-gap: 50px;
+  background: linear-gradient(
+    to right,
+    rgba(125, 218, 167, 0.733) 25%,
+    rgba(0, 0, 0, 0.733) 70%
+  );
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .owner-avatar {
+    max-height: 100%;
+    max-width: 100%;
+    place-self: center center;
+    grid-area: avatar;
+    border-radius: 10px;
+  }
+
+  .name {
+    grid-area: name;
+  }
+
+  .description {
+    grid-area: description;
+  }
+
+  .summary {
+    grid-area: summary;
+  }
+}
