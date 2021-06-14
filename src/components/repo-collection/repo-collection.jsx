@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import RepoItem from "../repo-item/repo-item";
-import { useFetchRepos } from "./effects";
+import { useFetchRepos } from "./repo-collection.effects";
 import "./repo-collection.scss";
 
 const RepoCollection = () => {

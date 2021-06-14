@@ -5,7 +5,7 @@
   color: azure;
   padding: 20px;
   border-radius: 10px;
-  text-align-last: left;
+  text-align: left;
   display: grid;
   grid-template:
     "avatar name"
@@ -13,7 +13,7 @@
     "avatar summary"
     / 1fr 5fr;
 
-  column-gap: 50px;
+  column-gap: 30px;
   background: linear-gradient(
     to right,
     rgba(125, 218, 167, 0.733) 25%,
@@ -32,6 +32,9 @@
     grid-area: avatar;
     border-radius: 10px;
   }
+  .owner-name {
+    color: cyan;
+  }
 
   .name {
     grid-area: name;
@@ -43,5 +46,18 @@
 
   .summary {
     grid-area: summary;
+  }
+
+  .description,
+  .name {
+    margin-bottom: 8px;
+  }
+
+  .stars,
+  .issues {
+    display: inline-block;
+    border: solid 1px azure;
+    padding: 4px;
+    margin-right: 5px;
   }
 }

@@ -7,6 +7,7 @@ const RepoItem = ({
   stargazers_count,
   open_issues_count,
   owner,
+  pushed_at,
 }) => {
   return (
     <article className="repo">
@@ -16,11 +17,15 @@ const RepoItem = ({
         alt={`${owner.login}'s avatar`}
       />
       <h2 className="name">{name}</h2>
-      <p className="description">{description}</p>
+      <p className="description">{description ?? "No Description"}</p>
       <div className="summary">
         <span className="stars">Stars: {stargazers_count}</span>
         <span className="issues">Issues: {open_issues_count}</span>
-        Submitted on <time dateTime="2021-06-12" /> by {owner.login}
+        Submitted on{" "}
+        <time dateTime={pushed_at}>
+          {new Date(pushed_at).toLocaleDateString()}
+        </time>{" "}
+        by <span className="owner-name">{owner.login}</span>
       </div>
     </article>
   );
