@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/frontend-github-repos/static/css/main.17474320.chunk.css",
+    "main.js": "/frontend-github-repos/static/js/main.6e10c4e0.chunk.js",
+    "main.js.map": "/frontend-github-repos/static/js/main.6e10c4e0.chunk.js.map",
+    "runtime-main.js": "/frontend-github-repos/static/js/runtime-main.53d0587d.js",
+    "runtime-main.js.map": "/frontend-github-repos/static/js/runtime-main.53d0587d.js.map",
+    "static/js/2.313e7fcb.chunk.js": "/frontend-github-repos/static/js/2.313e7fcb.chunk.js",
+    "static/js/2.313e7fcb.chunk.js.map": "/frontend-github-repos/static/js/2.313e7fcb.chunk.js.map",
+    "static/js/3.42ac579b.chunk.js": "/frontend-github-repos/static/js/3.42ac579b.chunk.js",
+    "static/js/3.42ac579b.chunk.js.map": "/frontend-github-repos/static/js/3.42ac579b.chunk.js.map",
+    "index.html": "/frontend-github-repos/index.html",
+    "static/css/main.17474320.chunk.css.map": "/frontend-github-repos/static/css/main.17474320.chunk.css.map",
+    "static/js/2.313e7fcb.chunk.js.LICENSE.txt": "/frontend-github-repos/static/js/2.313e7fcb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.53d0587d.js",
+    "static/js/2.313e7fcb.chunk.js",
+    "static/css/main.17474320.chunk.css",
+    "static/js/main.6e10c4e0.chunk.js"
+  ]
+}
