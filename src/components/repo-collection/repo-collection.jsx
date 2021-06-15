@@ -23,7 +23,12 @@ const RepoCollection = () => {
     }
   }, []);
 
-  const repos = useFetchRepos(setState, state.pageCount);
+  const repos = useFetchRepos(function callback() {
+    setState((prevState) => ({
+      ...prevState,
+      isLoading: false,
+    }));
+  }, state.pageCount);
 
   useEffect(() => {
     repoCollectionDOMRef.current.onscroll = handleScroll;

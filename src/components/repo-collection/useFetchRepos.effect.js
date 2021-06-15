@@ -23,7 +23,7 @@ const selectReposFromData = ({ items }) =>
     })
   );
 
-const useFetchRepos = (envSetState, pageCount) => {
+const useFetchRepos = (callback, pageCount) => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
@@ -32,11 +32,7 @@ const useFetchRepos = (envSetState, pageCount) => {
       const data = await response.json();
 
       setRepos((prevRepos) => [...prevRepos, ...selectReposFromData(data)]);
-
-      envSetState((prevEnvState) => ({
-        ...prevEnvState,
-        isLoading: false,
-      }));
+      callback();
     };
 
     try {
