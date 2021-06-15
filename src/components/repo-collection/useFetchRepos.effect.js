@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const $30DaysAgo = new Date(Date.now() - 30 * 24 * 3600 * 1000).toISOString();
 const apiURL = `https://api.github.com/search/repositories?q=created:>${$30DaysAgo}&sort=stars&order=desc`;
@@ -23,13 +23,17 @@ const selectReposFromData = ({ items }) =>
     })
   );
 
-const useFetchRepos = (setRepos, pageCount) => {
+const useFetchRepos = (setIsLoading, pageCount) => {
+  const [repos, setRepos] = useState([]);
+
   useEffect(() => {
     const fetchRepos = async () => {
       const response = await fetch(`${apiURL}&page=${pageCount}`);
       const data = await response.json();
 
       setRepos((prevRepos) => [...prevRepos, ...selectReposFromData(data)]);
+
+      setIsLoading(false);
     };
 
     try {
@@ -38,6 +42,8 @@ const useFetchRepos = (setRepos, pageCount) => {
       console.error(err);
     }
   }, [pageCount]);
+
+  return repos;
 };
 
 export default useFetchRepos;
