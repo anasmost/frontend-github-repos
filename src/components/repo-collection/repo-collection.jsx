@@ -4,20 +4,26 @@ import useFetchRepos from "./useFetchRepos.effect";
 import "./repo-collection.scss";
 
 const RepoCollection = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [pageCount, setPageCount] = useState(1);
+  const [state, setState] = useState({
+    pageCount: 1,
+    isLoading: true,
+  });
 
   const repoCollectionDOMRef = useRef(null);
 
   const handleScroll = useCallback((e) => {
     const { target } = e;
+
     if (target.scrollHeight - target.scrollTop < target.clientHeight * 1.5) {
-      setPageCount((prevPageCount) => ++prevPageCount);
+      setState((prevState) => ({
+        pageCount: prevState.pageCount + 1,
+        isLoading: true,
+      }));
       repoCollectionDOMRef.current.onscroll = undefined;
     }
   }, []);
 
-  const repos = useFetchRepos(setIsLoading, pageCount);
+  const repos = useFetchRepos(setState, state.pageCount);
 
   useEffect(() => {
     repoCollectionDOMRef.current.onscroll = handleScroll;

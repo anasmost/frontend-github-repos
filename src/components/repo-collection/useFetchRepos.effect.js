@@ -23,7 +23,7 @@ const selectReposFromData = ({ items }) =>
     })
   );
 
-const useFetchRepos = (setIsLoading, pageCount) => {
+const useFetchRepos = (envSetState, pageCount) => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
@@ -33,7 +33,10 @@ const useFetchRepos = (setIsLoading, pageCount) => {
 
       setRepos((prevRepos) => [...prevRepos, ...selectReposFromData(data)]);
 
-      setIsLoading(false);
+      envSetState((prevEnvState) => ({
+        ...prevEnvState,
+        isLoading: false,
+      }));
     };
 
     try {
