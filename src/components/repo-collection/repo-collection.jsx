@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import RepoItem from "../repo-item/repo-item";
 import useFetchRepos from "./useFetchRepos.effect";
 import "./repo-collection.scss";
+import WithSpinner from "../with-spinner/with-spinner";
 
 const RepoCollection = () => {
   const [state, setState] = useState({
@@ -36,11 +37,13 @@ const RepoCollection = () => {
   }, [repos]);
 
   return (
-    <div className="repo-collection" ref={repoCollectionDOMRef}>
-      {repos.map(({ id, ...otherRepoProps }) => (
-        <RepoItem key={id} {...otherRepoProps} />
-      ))}
-    </div>
+    <WithSpinner isLoading={state.isLoading}>
+      <div className="repo-collection" ref={repoCollectionDOMRef}>
+        {repos.map(({ id, ...otherRepoProps }) => (
+          <RepoItem key={id} {...otherRepoProps} />
+        ))}
+      </div>
+    </WithSpinner>
   );
 };
 
