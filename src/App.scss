@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  animation: spin 3s ease-in-out infinite;
+  animation: colorRotation 3s ease-in-out infinite;
 
   .title {
     margin: 0;
@@ -30,18 +30,19 @@
     }
   }
 
-  $transitionCount: 40;
-  @function ratio($i) {
-    $ratio: 100 * $i / $transitionCount;
-    @return #{$ratio}#{"%"};
+  //
+  $rotationStepsCount: 40;
+  @function rotationRatio($i) {
+    $rotationRatio: 100 * $i / $rotationStepsCount;
+    @return #{$rotationRatio}#{"%"};
   }
   @function degree($i) {
-    $degree: -45 + 360 * $i/ $transitionCount;
+    $degree: -45 + 360 * $i/ $rotationStepsCount;
     @return #{$degree}deg;
   }
-  @keyframes spin {
-    @for $i from 0 through $transitionCount {
-      #{ratio($i)} {
+  @keyframes colorRotation {
+    @for $i from 0 through $rotationStepsCount {
+      #{rotationRatio($i)} {
         background: conic-gradient(
           from degree($i) at top left,
           #749d34,
