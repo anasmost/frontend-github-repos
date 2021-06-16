@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const $30DaysAgo = new Date(Date.now() - 30 * 24 * 3600 * 1000).toISOString();
 const apiURL = `https://api.github.com/search/repositories?q=created:>${$30DaysAgo}&sort=stars&order=desc`;
 const selectReposFromData = ({ items }) =>
-  items.map(
+  items?.map(
     ({
       id,
       name,
@@ -23,26 +23,33 @@ const selectReposFromData = ({ items }) =>
     })
   );
 
-const useFetchRepos = (callback, pageCount) => {
-  const [repos, setRepos] = useState([]);
+const useFetchRepos = (callback, isLoading) => {
+  const [state, setState] = useState({
+    pageCount: 0,
+    repos: [],
+  });
 
   useEffect(() => {
-    const fetchRepos = async () => {
-      const response = await fetch(`${apiURL}&page=${pageCount}`);
-      const data = await response.json();
+    if (isLoading) {
+      const fetchRepos = async () => {
+        const response = await fetch(`${apiURL}&page=${state.pageCount + 1}`);
+        if (response.status === 200) {
+          const data = await response.json();
 
-      setRepos((prevRepos) => [...prevRepos, ...selectReposFromData(data)]);
-      callback();
-    };
+          setState(({ pageCount, repos }) => ({
+            pageCount: ++pageCount,
+            repos: [...repos, ...(selectReposFromData(data) ?? [])],
+          }));
+        }
 
-    try {
+        callback();
+      };
+
       fetchRepos();
-    } catch (err) {
-      console.error(err);
     }
-  }, [pageCount]);
+  }, [isLoading]);
 
-  return repos;
+  return state.repos;
 };
 
 export default useFetchRepos;
