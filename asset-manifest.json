@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/frontend-github-repos/static/css/main.17474320.chunk.css",
-    "main.js": "/frontend-github-repos/static/js/main.6e10c4e0.chunk.js",
-    "main.js.map": "/frontend-github-repos/static/js/main.6e10c4e0.chunk.js.map",
-    "runtime-main.js": "/frontend-github-repos/static/js/runtime-main.53d0587d.js",
-    "runtime-main.js.map": "/frontend-github-repos/static/js/runtime-main.53d0587d.js.map",
-    "static/js/2.313e7fcb.chunk.js": "/frontend-github-repos/static/js/2.313e7fcb.chunk.js",
-    "static/js/2.313e7fcb.chunk.js.map": "/frontend-github-repos/static/js/2.313e7fcb.chunk.js.map",
-    "static/js/3.42ac579b.chunk.js": "/frontend-github-repos/static/js/3.42ac579b.chunk.js",
-    "static/js/3.42ac579b.chunk.js.map": "/frontend-github-repos/static/js/3.42ac579b.chunk.js.map",
+    "main.css": "/frontend-github-repos/static/css/main.8d036853.chunk.css",
+    "main.js": "/frontend-github-repos/static/js/main.1f27b4e2.chunk.js",
+    "main.js.map": "/frontend-github-repos/static/js/main.1f27b4e2.chunk.js.map",
+    "runtime-main.js": "/frontend-github-repos/static/js/runtime-main.d8f4ec71.js",
+    "runtime-main.js.map": "/frontend-github-repos/static/js/runtime-main.d8f4ec71.js.map",
+    "static/js/2.71379f4d.chunk.js": "/frontend-github-repos/static/js/2.71379f4d.chunk.js",
+    "static/js/2.71379f4d.chunk.js.map": "/frontend-github-repos/static/js/2.71379f4d.chunk.js.map",
+    "static/js/3.7662e232.chunk.js": "/frontend-github-repos/static/js/3.7662e232.chunk.js",
+    "static/js/3.7662e232.chunk.js.map": "/frontend-github-repos/static/js/3.7662e232.chunk.js.map",
     "index.html": "/frontend-github-repos/index.html",
-    "static/css/main.17474320.chunk.css.map": "/frontend-github-repos/static/css/main.17474320.chunk.css.map",
-    "static/js/2.313e7fcb.chunk.js.LICENSE.txt": "/frontend-github-repos/static/js/2.313e7fcb.chunk.js.LICENSE.txt"
+    "static/css/main.8d036853.chunk.css.map": "/frontend-github-repos/static/css/main.8d036853.chunk.css.map",
+    "static/js/2.71379f4d.chunk.js.LICENSE.txt": "/frontend-github-repos/static/js/2.71379f4d.chunk.js.LICENSE.txt",
+    "static/media/spinner.5702c3fd.svg": "/frontend-github-repos/static/media/spinner.5702c3fd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.53d0587d.js",
-    "static/js/2.313e7fcb.chunk.js",
-    "static/css/main.17474320.chunk.css",
-    "static/js/main.6e10c4e0.chunk.js"
+    "static/js/runtime-main.d8f4ec71.js",
+    "static/js/2.71379f4d.chunk.js",
+    "static/css/main.8d036853.chunk.css",
+    "static/js/main.1f27b4e2.chunk.js"
   ]
 }
