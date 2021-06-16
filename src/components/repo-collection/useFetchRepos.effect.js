@@ -11,7 +11,7 @@ const selectReposFromData = ({ items }) =>
       stargazers_count,
       open_issues_count,
       pushed_at,
-      owner: { login, avatar_url },
+      owner: { login, avatar_url,html_url },
     }) => ({
       id,
       name,
@@ -19,7 +19,7 @@ const selectReposFromData = ({ items }) =>
       stargazers_count,
       open_issues_count,
       pushed_at,
-      owner: { login, avatar_url },
+      owner: { login, avatar_url,html_url },
     })
   );
 

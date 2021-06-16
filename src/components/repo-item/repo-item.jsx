@@ -25,7 +25,10 @@ const RepoItem = ({
         <time dateTime={pushed_at}>
           {new Date(pushed_at).toLocaleDateString()}
         </time>{" "}
-        by <span className="owner-name">{owner.login}</span>
+        by{" "}
+        <a className="owner-name" href={owner.html_url} target="_blank">
+          {owner.login}
+        </a>
       </div>
     </article>
   );
