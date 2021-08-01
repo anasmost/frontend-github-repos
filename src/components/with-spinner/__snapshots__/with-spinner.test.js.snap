@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WithSpiner/> Test renders WithSpinner 1`] = `ShallowWrapper {}`;
+
+exports[`renders shallowly WithSpinner 1`] = `ShallowWrapper {}`;
