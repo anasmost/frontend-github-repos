@@ -61,4 +61,25 @@
     padding: 4px;
     margin-right: 5px;
   }
+
+  @media (max-width: 480px) {
+    text-align: center;
+    grid-template:
+      "avatar"
+      "name"
+      "description"
+      "summary"
+      / 1fr;
+    gap: 10px;
+    .owner-avatar {
+      max-height: 150px;
+    }
+    .name {
+      margin-bottom: 10px;
+    }
+    .submition {
+      display: block;
+      margin-top: 5px;
+    }
+  }
 }

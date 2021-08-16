@@ -1,0 +1,31 @@
+{
+  "short_name": "Github Repos",
+  "name": "Most Starred Github Repos",
+  "icons": [
+    {
+      "src": "favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "64x64 32x32 24x24"
+    },
+    {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": ".",
+  "theme_color": "#00eb9d",
+  "background_color": "#00eb9d",
+  "display": "standalone"
+}

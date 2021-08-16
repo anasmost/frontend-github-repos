@@ -1,8 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import "./with-spinner.styles.scss";
 import { ReactComponent as Spinner } from "./spinner.svg";
 
-const WithSpinner = ({ isLoading, children }) => (
+type WithSpinnerProps = {
+  isLoading: boolean;
+  children: ReactNode;
+};
+
+const WithSpinner = ({ isLoading, children }: WithSpinnerProps) => (
   <>
     {isLoading && <Spinner className="spinner" />}
     {children}
