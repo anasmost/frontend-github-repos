@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/frontend-github-repos/static/css/main.1d293962.chunk.css",
-    "main.js": "/frontend-github-repos/static/js/main.09896089.chunk.js",
-    "main.js.map": "/frontend-github-repos/static/js/main.09896089.chunk.js.map",
+    "main.css": "/frontend-github-repos/static/css/main.d9ed2be9.chunk.css",
+    "main.js": "/frontend-github-repos/static/js/main.13172284.chunk.js",
+    "main.js.map": "/frontend-github-repos/static/js/main.13172284.chunk.js.map",
     "runtime-main.js": "/frontend-github-repos/static/js/runtime-main.53d0587d.js",
     "runtime-main.js.map": "/frontend-github-repos/static/js/runtime-main.53d0587d.js.map",
     "static/js/2.2c486191.chunk.js": "/frontend-github-repos/static/js/2.2c486191.chunk.js",
@@ -12,14 +12,14 @@
     "index.html": "/frontend-github-repos/index.html",
     "service-worker.js": "/frontend-github-repos/service-worker.js",
     "service-worker.js.map": "/frontend-github-repos/service-worker.js.map",
-    "static/css/main.1d293962.chunk.css.map": "/frontend-github-repos/static/css/main.1d293962.chunk.css.map",
+    "static/css/main.d9ed2be9.chunk.css.map": "/frontend-github-repos/static/css/main.d9ed2be9.chunk.css.map",
     "static/js/2.2c486191.chunk.js.LICENSE.txt": "/frontend-github-repos/static/js/2.2c486191.chunk.js.LICENSE.txt",
     "static/media/spinner.96eb793c.svg": "/frontend-github-repos/static/media/spinner.96eb793c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.53d0587d.js",
     "static/js/2.2c486191.chunk.js",
-    "static/css/main.1d293962.chunk.css",
-    "static/js/main.09896089.chunk.js"
+    "static/css/main.d9ed2be9.chunk.css",
+    "static/js/main.13172284.chunk.js"
   ]
 }
