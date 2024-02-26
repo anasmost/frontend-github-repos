@@ -1,11 +1,4 @@
-import React, {
-  DependencyList,
-  FC,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { FC, useCallback, useEffect, useRef, useState } from "react";
 import RepoItem from "../repo-item/repo-item";
 import useFetchRepos, { Repo } from "./useFetchRepos.effect";
 import "./repo-collection.scss";
@@ -21,24 +14,19 @@ const RepoCollection: FC = () => {
       setIsLoading(true);
       repoCollectionDOMRef.current!.onscroll = null;
     }
-  }, [] as DependencyList);
+  }, []);
 
-  const repos: Array<Repo> = useFetchRepos(
-    () => setIsLoading(false),
-    isLoading
-  );
+  const repos: Array<Repo> = useFetchRepos(() => setIsLoading(false), isLoading);
 
-  useEffect(
-    () => {
-      if (!isLoading) {
-        repoCollectionDOMRef.current!.onscroll = handleScroll;
-        return () => {
-          repoCollectionDOMRef.current!.onscroll = null;
-        };
-      }
-    },
-    [isLoading] as DependencyList
-  );
+  useEffect(() => {
+    const repoCollectionDOM = repoCollectionDOMRef.current;
+    if (!isLoading) {
+      repoCollectionDOM!.onscroll = handleScroll;
+      return () => {
+        repoCollectionDOM!.onscroll = null;
+      };
+    }
+  }, [handleScroll, isLoading]);
 
   return (
     <WithSpinner isLoading={isLoading}>

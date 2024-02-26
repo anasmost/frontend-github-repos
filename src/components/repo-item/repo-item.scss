@@ -14,11 +14,7 @@
     / 1fr 5fr;
 
   column-gap: 30px;
-  background: linear-gradient(
-    to right,
-    rgba(125, 218, 167, 0.733) 25%,
-    rgba(0, 0, 0, 0.733) 70%
-  );
+  background: linear-gradient(to right, #7ddaa7bb 25%, #000000bb 70%);
 
   * {
     margin: 0;
@@ -26,11 +22,15 @@
   }
 
   .owner-avatar {
-    max-height: 100%;
-    max-width: 100%;
-    place-self: center center;
     grid-area: avatar;
+    overflow: hidden;
+    place-self: center center;
     border-radius: 10px;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
   }
   .owner-name {
     color: cyan;
@@ -39,6 +39,24 @@
 
   .name {
     grid-area: name;
+    background-image: linear-gradient(to right, azure 30%, cyan);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    min-width: min-content;
+    width: 100%;
+    max-width: max-content;
+
+    @keyframes attention {
+      from {
+        background-image: linear-gradient(to right, azure 30%, cyan);
+        text-decoration: none;
+      }
+      to {
+        background-image: linear-gradient(to right, cyan 30%, azure);
+        text-decoration: underline solid cyan;
+      }
+    }
+    animation: attention 5s linear infinite;
   }
 
   .description {

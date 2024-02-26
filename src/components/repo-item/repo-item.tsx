@@ -10,20 +10,16 @@ const RepoItem: FC<Repo> = ({
   open_issues_count,
   owner,
   pushed_at,
+  html_url,
 }) => {
   return (
-    <article
-      className="repo"
-      tabIndex={0}
-      aria-label={`${name} repository`}
-      aria-describedby={id}
-    >
-      <img
-        className="owner-avatar"
-        src={owner.avatar_url}
-        alt={`${owner.login}'s avatar`}
-      />
-      <h2 className="name">{name}</h2>
+    <article className="repo" tabIndex={0} aria-label={`${name} repository`} aria-describedby={id}>
+      <a href={html_url} className="owner-avatar" target="_blank" rel="noreferrer">
+        <img src={owner.avatar_url} alt={`${owner.login}'s avatar`} />
+      </a>
+      <a href={html_url} className="name" target="_blank" rel="noreferrer">
+        <h2>{name}</h2>
+      </a>
       <p className="description" id={id}>
         {description ?? "No Description"}
       </p>
@@ -31,16 +27,13 @@ const RepoItem: FC<Repo> = ({
         <span className="stars">Stars: {stargazers_count}</span>
         <span className="issues">Issues: {open_issues_count}</span>
         <span className="submition">
-          Submitted on{" "}
-          <time dateTime={pushed_at}>
-            {new Date(pushed_at).toLocaleDateString()}
-          </time>{" "}
+          Submitted on <time dateTime={pushed_at}>{new Date(pushed_at).toLocaleDateString()}</time>{" "}
           by{" "}
           <a
             className="owner-name"
             href={owner.html_url}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             tabIndex={0}
             aria-label={`link of ${name} repository on github`}
           >
