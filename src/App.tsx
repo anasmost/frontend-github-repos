@@ -10,6 +10,22 @@ const App: React.FunctionComponent = () => {
         <span className="star">&#10022;</span>
       </h1>
       <RepoCollection />
+      <footer className="footer">
+        <address>
+          {/* eslint-disable-next-line react/jsx-no-target-blank */}
+          <a href="https://anasmost-bio.vercel.app/" target="_blank">
+            Always Up to date
+            <span>
+              <img
+                src="https://anasmost-bio.vercel.app/_next/static/media/favicon.91b328e8.ico"
+                alt="Anas Mostafa"
+              />
+              &copy;
+            </span>
+            {new Date().getFullYear()}
+          </a>
+        </address>
+      </footer>
     </div>
   );
 };
