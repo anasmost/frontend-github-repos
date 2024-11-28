@@ -4,10 +4,6 @@
   "private": true,
   "homepage": "https://anasmost.github.io/frontend-github-repos",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.13.0",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/enzyme": "^3.10.9",
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.17",
     "@types/react-dom": "^17.0.9",
@@ -49,9 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6"
   }
 }
