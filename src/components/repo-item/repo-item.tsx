@@ -27,8 +27,7 @@ const RepoItem: FC<Repo> = ({
         <span className="stars">Stars: {stargazers_count}</span>
         <span className="issues">Issues: {open_issues_count}</span>
         <span className="submition">
-          Submitted on <time dateTime={pushed_at}>{new Date(pushed_at).toLocaleDateString()}</time>{" "}
-          by{" "}
+          Submitted on <time dateTime={pushed_at}>{pushed_at?.replace(/T.+/, "")}</time> by{" "}
           <a
             className="owner-name"
             href={owner.html_url}
